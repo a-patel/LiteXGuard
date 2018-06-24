@@ -34,26 +34,24 @@ Range
 - **Guard.IsPositive** (throws if specified value is not positive)
 - **Guard.NotNegative** (throws if specified value is negative)
 - **Guard.NotZero** (throws if specified value is zero)
-- **Guard.PagingArgsValid** (throws if specified value is out of the range)
+- **Guard.PagingArgsValid** (throws if specified value is out of the page range)
 
 Misc
-- **Guard.IsEqual** (throws if string input is null, empty or whitespace)
-- **Guard.Against** (throws if the specified value is less than a maximum value)
-- **Guard.Cast** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
-- **Guard.IsTrue** (throws if string input is null, empty or whitespace)
-- **Guard.IsFalse** (throws if integer/DateTime input is outside a provided range)
-- **Guard.GetParamName** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
+- **Guard.IsEqual** (throws if )
+- **Guard.Against** (throws if )
+- **Guard.Cast** (throws if )
+- **Guard.IsTrue** (throws if )
+- **Guard.IsFalse** (throws if )
+- **Guard.GetParamName** (throws if )
 
 Type
-- **Guard.IsFunction** (throws if string input is null, empty or whitespace)
-- **Guard.IsEnumType** (throws if integer/DateTime input is outside a provided range)
-- **Guard.InheritsFrom** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
-- **Guard.Implements** (throws if string input is null, empty or whitespace)
-- **Guard.IsSubclassOf** (throws if integer/DateTime input is outside a provided range)
-- **Guard.IsTypeOf** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
-
-Range
-- **Guard.HasDefaultConstructor** (throws if string input is null, empty or whitespace)
+- **Guard.IsFunction** (throws if )
+- **Guard.IsEnumType** (throws if )
+- **Guard.InheritsFrom** (throws if )
+- **Guard.Implements** (throws if )
+- **Guard.IsSubclassOf** (throws if )
+- **Guard.IsTypeOf** (throws if )
+- **Guard.HasDefaultConstructor** (throws if )
 
 
 ## Usage
