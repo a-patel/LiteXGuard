@@ -17,6 +17,45 @@ Run the nuget command for installing the client as,
 Install-Package LiteX.Guard
 ```
 
+
+## Supported Guard Clauses
+
+Null/Empty
+- **Guard.NotNull** (throws if input is null)
+- **Guard.NotNullOrEmpty** (throws if string input is null or empty)
+
+Range
+- **Guard.InRange** (throws if specified value is greater than or equal to a minimum value and less than)
+- **Guard.LessThan** (throws if specified value is less than a maximum value)
+- **Guard.LessThanOrEqualTo** (throws if specified value is less than or equal to a maximum value)
+- **Guard.GreaterThan** (throws if specified value is greater than a minimum value)
+- **Guard.GreaterThanOrEqualTo** (throws if specified value is greater than or equal to a minimum value)
+- **Guard.NotOutOfLength** (throws if specified value is out of the range)
+- **Guard.IsPositive** (throws if specified value is not positive)
+- **Guard.NotNegative** (throws if specified value is negative)
+- **Guard.NotZero** (throws if specified value is zero)
+- **Guard.PagingArgsValid** (throws if specified value is out of the range)
+
+Misc
+- **Guard.IsEqual** (throws if string input is null, empty or whitespace)
+- **Guard.Against** (throws if the specified value is less than a maximum value)
+- **Guard.Cast** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
+- **Guard.IsTrue** (throws if string input is null, empty or whitespace)
+- **Guard.IsFalse** (throws if integer/DateTime input is outside a provided range)
+- **Guard.GetParamName** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
+
+Type
+- **Guard.IsFunction** (throws if string input is null, empty or whitespace)
+- **Guard.IsEnumType** (throws if integer/DateTime input is outside a provided range)
+- **Guard.InheritsFrom** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
+- **Guard.Implements** (throws if string input is null, empty or whitespace)
+- **Guard.IsSubclassOf** (throws if integer/DateTime input is outside a provided range)
+- **Guard.IsTypeOf** (throws if DateTime input is outside the valid range of SQL Server DateTime values)
+
+Range
+- **Guard.HasDefaultConstructor** (throws if string input is null, empty or whitespace)
+
+
 ## Usage
 
 ```C#
