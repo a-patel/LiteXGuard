@@ -9,12 +9,35 @@ Argument validation made simple and unified. It ensures arguments conforms to si
 It's developed for .NET Standard 2.0 and available via [NuGet](https://www.nuget.org/packages/LiteX.Guard/).
 
 
-## Basic Usage
-
 
 ### Install Nuget package
 
 Run the nuget command for installing the client as,
 ```
 Install-Package LiteX.Guard
+```
+
+## Usage
+
+```C#
+public void Foo(Bar bar)
+{
+    Guard.NotNullOrEmpty(nameof(bar), bar);
+    Guard.NotNullOrEmpty(nameof(bar), nameof(bar.Baz), bar.Baz);
+    Guard.NotNullOrEmpty(nameof(bar), "Baz.Bazz", bar.Baz.Bazz);
+
+    // the rest of your method, nice and safe, wrapped in the protecting arms of LiteGuard
+}
+
+public void Foo<T>(T bar) where T : class
+{
+    Guard.NotNullOrEmpty(nameof(bar), bar);
+    ...
+}
+
+public void Foo<T>(T bar)
+{
+    Guard.NotNullOrEmpty(nameof(bar), bar);
+    ...
+}
 ```
