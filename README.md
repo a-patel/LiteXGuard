@@ -59,24 +59,80 @@ Range
 ## Usage
 
 ```C#
-public void Foo(Bar bar)
+public class CustomerController : Controller
 {
-    Guard.NotNullOrEmpty(nameof(bar), bar);
-    Guard.NotNullOrEmpty(nameof(bar), nameof(bar.Baz), bar.Baz);
-    Guard.NotNullOrEmpty(nameof(bar), "Baz.Bazz", bar.Baz.Bazz);
+    [HttpPost]
+    [Route("add-customer")]
+    public IActionResult AddCustomer(Customer customer)
+    {
+        // class (custom type) guard
+        Guard.NotNull(customer, nameof(customer));
 
-    // the rest of your method, nice and safe, wrapped in the protecting arms of LiteGuard
-}
+        // property guard
+        Guard.NotNullOrEmpty(customer.Username, nameof(customer.Username));
 
-public void Foo<T>(T bar) where T : class
-{
-    Guard.NotNullOrEmpty(nameof(bar), bar);
-    ...
-}
+        // explicit message
+        Guard.NotNullOrEmpty(customer.FirstName, nameof(customer.FirstName), "Firstname is required");
 
-public void Foo<T>(T bar)
-{
-    Guard.NotNullOrEmpty(nameof(bar), bar);
-    ...
+        // int range guard
+        Guard.GreaterThanOrEqualTo(10, 50, nameof(customer.Age));
+
+        // bool guard
+        Guard.IsFalse(customer.IsActive, nameof(customer.IsActive));
+
+        return Ok();
+    }
+
+    [HttpGet]
+    [Route("find-customer")]
+    public IActionResult FindCustomer(string username)
+    {
+        Guard.NotNullOrEmpty(username, nameof(username));
+
+
+        return Ok();
+    }
+
+    [HttpGet]
+    [Route("get-customer-by-age")]
+    public IActionResult GetCustomerByAge(int age)
+    {
+        // int range guard
+        Guard.GreaterThanOrEqualTo(10, 50, nameof(age));
+
+        return Ok();
+    }
+
+    [HttpGet]
+    [Route("get-active-customers")]
+    public IActionResult GetActiveCustomers(bool isActive)
+    {
+        // bool guard
+        Guard.IsFalse(isActive, nameof(isActive));
+
+
+        return Ok();
+    }
+
+    [HttpPost]
+    [Route("add-customer-T")]
+    public IActionResult AddCustomer<T>(T customer) where T : class
+    {
+        // generic type guard
+        Guard.NotNull<T>(customer, nameof(customer));
+
+        return Ok();
+    }
+
+    [HttpPost]
+    [Route("add-customers")]
+    public IActionResult AddCustomers(List<Customer> customers)
+    {
+        // list guard
+        Guard.NotNull(customers, nameof(customers));
+
+
+        return Ok();
+    }
 }
 ```
