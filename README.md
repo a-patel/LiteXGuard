@@ -6,15 +6,15 @@ A simple package with guard clause helper methods. This library provides guard c
 Argument validation made simple and unified. It ensures arguments conforms to simple validation rules and provides an uniformed exception throwing strategy if arguments are invalid.
 
 
-It's developed for .NET Standard 2.0 and available via [NuGet](https://www.nuget.org/packages/LiteX.Guard/).
+It's developed for .NET Standard 2.0 and available via NuGet.
 
 
 
-### Install Nuget package
+### Install package
+> Install via [Nuget](https://www.nuget.org/packages/LiteX.Guard/).
 
-Run the nuget command for installing the client as,
-```
-Install-Package LiteX.Guard
+```Powershell
+PM> Install-Package LiteX.Guard
 ```
 
 
@@ -37,21 +37,21 @@ Range
 - **Guard.PagingArgsValid** (throws if specified value is out of the page range)
 
 Misc
-- **Guard.IsEqual** (throws if )
-- **Guard.Against** (throws if )
-- **Guard.Cast** (throws if )
-- **Guard.IsTrue** (throws if )
-- **Guard.IsFalse** (throws if )
-- **Guard.GetParamName** (throws if )
+- **Guard.IsEqual** (throws if ...)
+- **Guard.Against** (throws if ...)
+- **Guard.Cast** (throws if ...)
+- **Guard.IsTrue** (throws if ...)
+- **Guard.IsFalse** (throws if ...)
+- **Guard.GetParamName** (throws if ...)
 
 Type
-- **Guard.IsFunction** (throws if )
-- **Guard.IsEnumType** (throws if )
-- **Guard.InheritsFrom** (throws if )
-- **Guard.Implements** (throws if )
-- **Guard.IsSubclassOf** (throws if )
-- **Guard.IsTypeOf** (throws if )
-- **Guard.HasDefaultConstructor** (throws if )
+- **Guard.IsFunction** (throws if ...)
+- **Guard.IsEnumType** (throws if ...)
+- **Guard.InheritsFrom** (throws if ...)
+- **Guard.Implements** (throws if ...)
+- **Guard.IsSubclassOf** (throws if ...)
+- **Guard.IsTypeOf** (throws if ...)
+- **Guard.HasDefaultConstructor** (throws if ...)
 
 
 ## Usage
