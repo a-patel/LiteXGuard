@@ -5,7 +5,6 @@ A simple package with guard clause helper methods. This library provides guard c
 
 Argument validation made simple and unified. It ensures arguments conforms to simple validation rules and provides an uniformed exception throwing strategy if arguments are invalid.
 
-
 It's developed for .NET Standard 2.0 and available via NuGet.
 
 
